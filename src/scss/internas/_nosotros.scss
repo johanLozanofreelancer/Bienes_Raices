@@ -1,0 +1,12 @@
+.contenido-nosotros {
+    @include tablet {
+        @include grid (2, 2rem)
+    }
+}
+
+.texto-nosotros blockquote {
+    margin-top: 5rem;
+    font-size: 2.4rem;
+    font-weight: $bold;
+    margin: 0 0 3rem 0;
+}

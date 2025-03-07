@@ -1,0 +1,18 @@
+.footer {
+    background-color: $grisOscuro;
+    padding: 2rem;
+    .contenido-footer {
+        padding: 1rem 0;
+    }
+    .copyright {
+        color: $blanco;
+        text-align: center;
+    }
+    .navegacion {
+        visibility: visible;
+        opacity: 1;
+        height: auto;
+    }
+    
+}
+

@@ -1,0 +1,24 @@
+.no-webp .imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+}
+.webp .imagen-contacto {
+    background-image: url(../img/encuentra.webp);
+}
+.imagen-contacto {
+    background-position: center center;
+    background-size: cover;
+    padding: $separacion 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        color: $blanco;
+        font-size: 1.8rem;
+    }
+    h2 {
+        color: $blanco;
+        font-weight: $black;
+        font-size: 4rem;
+    }
+}

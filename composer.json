@@ -1,0 +1,17 @@
+{
+    "name": "johan/bienes-raices",
+    "description": "creacion de Pagina Web, venta de bienes raices;",
+    "type": "project",
+    "authors": [
+        {
+            "name": "johanLozanofreelancer",
+            "email": "ankerjohan@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\" : "./classes"
+        }
+    }
+}
