@@ -1,11 +1,9 @@
 <?php
 
-    //importar la base de datos
-    require 'includes/config/databases.php';
+    //conectar a la base de datos
     $db = conectarDB();
 
     //consultar en la base de datos
-
     $query = "SELECT * FROM propiedades LIMIT {$limite};";
 
     //obtener los resultados
