@@ -1,12 +1,10 @@
 <?php
-    require '../../includes/funciones.php';
-    $auth = estaAutenticado();
+    require '../../includes/app.php';
 
-    if(!$auth) {
-        header ('Location: /');
-    }
+    use App\Propiedad;
 
-    require '../../includes/config/databases.php';
+    estaAutenticado();
+
     $db = conectarDB();
 
     // consultar para obtener datos de los vendedores
@@ -30,6 +28,8 @@
     //Ejecuta el codigo despues de que se envia el formulario
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        $propiedad = new Propiedad($_POST);
 
         // echo "<pre>";
         // var_dump($_POST);
@@ -82,20 +82,19 @@
         }
 
 
-        $carpetaImagen = '../../imagenes/';
-
-        if ( !is_dir($carpetaImagen)) {
-            mkdir($carpetaImagen);
-        }
-
-        $nombreImagen = md5( uniqid( rand(), true ) ) . '.jpg' ;
-
-        move_uploaded_file($imagen['tmp_name'], $carpetaImagen . $nombreImagen );
-
-
         //Insertar en la Base de Datos si el array   de errores esta vacio
         if (empty ($errores)) {
-            $query = " INSERT INTO propiedades (titulo, precio, imagen, descripcion, habitaciones, wc, estacionamiento, creado, vendedores_id) VALUES ('$titulo', '$precio', '$nombreImagen', '$descripcion', '$habitaciones', '$wc', '$estacionamiento', '$creado', '$vendedores_id')";
+
+            $carpetaImagen = '../../imagenes/';
+
+            if ( !is_dir($carpetaImagen)) {
+                mkdir($carpetaImagen);
+            }
+
+            $nombreImagen = md5( uniqid( rand(), true ) ) . '.jpg' ;
+
+            move_uploaded_file($imagen['tmp_name'], $carpetaImagen . $nombreImagen );
+
 
            
             $resultado = mysqli_query($db, $query);
@@ -203,7 +202,7 @@
         <fieldset>
             <legend>Vendedor</legend>
             
-            <select name="vendedor">
+            <select name="vendedor_id">
                 <option value="" selected disabled>--Seleccione--</option>
                 <?php while ($vendedor = mysqli_fetch_assoc($resultado)) : ?>
                     <option  <?php echo $vendedores_id === $vendedor['id'] ? 'selected' : ''; ?> value="<?php echo $vendedor['id']; ?>"> <?php echo $vendedor['nombre'] . " " . $vendedor['apellido'] ?> </option>

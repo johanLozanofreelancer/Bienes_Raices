@@ -1,5 +1,5 @@
 <?php
-    require '../includes/funciones.php';
+    require '../includes/app.php';
     $auth = estaAutenticado();
 
     if(!$auth) {
@@ -7,7 +7,6 @@
     }
 
     //Importa la conexión
-    require '../includes/config/databases.php';
     $db = conectarDB();
 
     //Escribir el Query    
@@ -60,7 +59,7 @@
             <p class="alerta exito"> Anuncio Eliminado Correctamente</p>        
         <?php endif;?>
 
-        <a href="/admin/propiedades/crear.php" class="boton boton-verde"> Crear </a>
+        <a href="/admin/propiedades/crear.php" class="boton boton-verde"> Nueva Propiedad </a>
 
         <table class="propiedades">
             <thead>

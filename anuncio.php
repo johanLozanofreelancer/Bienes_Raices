@@ -8,7 +8,7 @@
     };
 
 
-    require 'includes/config/databases.php';
+
     $db = conectarDB();
 
     $consulta = "SELECT * FROM propiedades WHERE id = {$id}";
@@ -24,7 +24,7 @@
     $propiedad = mysqli_fetch_assoc($resultado);
 
 
-    require 'includes/funciones.php';
+    require 'includes/app.php';
     incluirTemplate('header');
 ?>
 
