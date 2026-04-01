@@ -43,7 +43,7 @@
                 </select>
 
                 <label for="presupuesto">Precio o Presupuesto</label>
-                <input type="number" placeholder="Tu Telefono" name="Telefono">
+                <input type="number" placeholder="Tu Precio o Presupuesto" name="Telefono">
             </fieldset>
 
             <fieldset>
@@ -64,7 +64,7 @@
                 <input type="date" id="fecha" >
 
                 <label for="hora">Hora</label>
-                <input type="time" id="hora" min="9:00" max="18:00" >
+                <input type="time" id="hora" min="09:00" max="18:00" >
 
             </fieldset>
 

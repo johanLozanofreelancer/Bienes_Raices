@@ -5,8 +5,13 @@
 }
 
 .texto-nosotros blockquote {
-    margin-top: 5rem;
+    margin-top: 5rem; 
     font-size: 2.4rem;
     font-weight: $bold;
-    margin: 0 0 3rem 0;
+    text-align: center;
+    @include tablet {
+        text-align: left;
+        margin: 0 0 3rem 0;
+    }
+
 }

@@ -11,7 +11,7 @@
 
     // consultar para obtener datos de los vendedores
     $consulta = " SELECT * FROM vendedores ";
-    $resultado = mysqli_query ($db, $consulta);
+    $resultado = mysqli_query ($db, $consulta); 
 
 
     // Arreglo con mensajes de errores
@@ -100,7 +100,7 @@
            
             $resultado = mysqli_query($db, $query);
             if($resultado) { 
-                header('location: /admin?resultado=1');
+                header('Location: /admin?resultado=1');
             }
 
         }

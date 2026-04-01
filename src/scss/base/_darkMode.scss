@@ -1,5 +1,7 @@
+@use "sass:color";
+
 .darkMode {
-    background-color: darken($grisOscuro, 10);
+    background-color: color.adjust($grisOscuro, $lightness: -10%);
 
     p, blockquote, td {
         color: $blanco;

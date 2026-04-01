@@ -37,9 +37,9 @@
             $limite = 3;
             include 'includes/templates/anuncios.php' ;
         ?>
-        <Div class="ver-todas">
+        <div class="ver-todas">
             <a href="anuncios.php" class="boton-verde">Ver Todas</a>
-        </Div>
+        </div>
     </section>
 
     <section class="imagen-contacto">

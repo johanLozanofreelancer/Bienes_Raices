@@ -1,3 +1,4 @@
+@use "sass:color";
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 
 // Fuentes
@@ -14,7 +15,7 @@ $amarillo: #E08709;;
 $verde: #71B100;
 $blanco: #FFFFFF;
 $gris: #e1e1e1;
-$grisClaro: scale-color($gris, $lightness:50% );
+$grisClaro: color.adjust($gris, $lightness: .4% );
 $grisOscuro: #333333;
 $rojo: rgba(157, 0, 0, 0.826);
 
